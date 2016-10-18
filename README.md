@@ -28,11 +28,16 @@ chmod +x run.sh
 # How it works
 
 ```
-./run.sh /full/path/to/logo /full/path/to/video.mp4 /full/path/to/audio.mp3 /full/path/to/output.mp4 '999 999 9999' 'www.somewebsite.com'
+./run.sh /full/path/to/logo /full/path/to/video.mp4 /full/path/to/audio.mp3 /full/path/to/output.mp4 "999 999 9999" "www.somewebsite.com"
 ```
 
-The last two variables are optional. They default to blank.
+The last two variables are optional. They default to blank. NOTE: Must use DOUBLE quotes `""`!
 
 It is SUPER IMPORTANT that you use FULL paths. For example, relative paths like `/img/P1BHs.png` fail. It MUST be `./img/P1BHs.png` OR `/Users/dnoriega/GitHub/auto-logo-and-merge/img/P1BHs.png`.
 
 This distinction was what kept me from getting the thing to work for like 2 hours. So annoying.
+
+# To-do
+
+You can get imagemagick to use system fonts by following instructions here:
+http://gothick.org.uk/2008/03/14/using-os-x-fonts-in-imagemagick/
