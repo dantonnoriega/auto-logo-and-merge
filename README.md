@@ -2,10 +2,15 @@
 
 1. Install (Homebrew)[http://brew.sh/]
 2. Install `imagemagick`
+
 ```brew install imagemagick```
+
 3. Install `ffmpeg`
+
 ```brew install ffmpeg```
+
 4. Install `rmtrash`
+
 ```brew install rmtrash```
 
 # Run
@@ -13,6 +18,7 @@
 1. Open up your Terminal.app
 	- easiest is to hit `command+space`, bring up spotlight, and type in "Terminal"
 2. Run the script. Assume you downloaded a zip file to `~/Downloads/auto-logo-and-merge-master.zip` and unzipped the folder `auto-logo-and-merge-master`. Here is a working example.
+
 ```
 cd ~/Downloads/auto-logo-and-merge-master/
 chmod +x run.sh
@@ -21,7 +27,9 @@ chmod +x run.sh
 
 # How it works
 
-`./run.sh /full/path/to/logo /full/path/to/video.mp4 /full/path/to/output.mp4 '999 999 9999' 'www.somewebsite.com'`
+```
+./run.sh /full/path/to/logo /full/path/to/video.mp4 /full/path/to/output.mp4 '999 999 9999' 'www.somewebsite.com'
+```
 
 The last two variables are optional. They default to blank.
 
