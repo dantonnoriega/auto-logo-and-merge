@@ -2,9 +2,11 @@
 
 VIDEO=$1
 OUTPUT=$2
+AUDIO=$3
 
 echo "VIDEO = $VIDEO"
 echo "OUTPUT = $OUTPUT"
+echo "AUDIO = $AUDIO"
 
 # generate static, 10 sec still
 # NOTE input are relative but OUTPUTS must have a './'
@@ -25,6 +27,8 @@ fi
 echo "file '$(pwd)/mp4/01-video-recode.mp4'\nfile '$(pwd)/mp4/02-logo-static.mp4'" > 'files.txt'
 
 # merge
-ffmpeg -f concat -safe 0 -i $(pwd)/files.txt -c copy $OUTPUT;
+ffmpeg -f concat -safe 0 -i $(pwd)/files.txt -c copy $(pwd)/mp4/video-noaudio.mp4;
 
-rmtrash ./mp4/01-video-recode.mp4 ./mp4/02-logo-static.mp4 ./img/logo_static.png files.txt;
+ffmpeg -i $(pwd)/mp4/video-noaudio.mp4 -i $AUDIO -c copy -map 0:0 -map 1:0 $OUTPUT;
+
+rmtrash ./mp4/01-video-recode.mp4 ./mp4/02-logo-static.mp4 ./img/logo_static.png ./mp4/video-noaudio.mp4 files.txt;

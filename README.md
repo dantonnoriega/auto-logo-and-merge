@@ -1,6 +1,6 @@
 # Set-up
 
-1. Install (Homebrew)[http://brew.sh/]
+1. Install [Homebrew](http://brew.sh/)
 2. Install `imagemagick`
 
 ```brew install imagemagick```
@@ -28,7 +28,7 @@ chmod +x run.sh
 # How it works
 
 ```
-./run.sh /full/path/to/logo /full/path/to/video.mp4 /full/path/to/output.mp4 '999 999 9999' 'www.somewebsite.com'
+./run.sh /full/path/to/logo /full/path/to/video.mp4 /full/path/to/audio.mp3 /full/path/to/output.mp4 '999 999 9999' 'www.somewebsite.com'
 ```
 
 The last two variables are optional. They default to blank.
