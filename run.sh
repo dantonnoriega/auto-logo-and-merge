@@ -4,7 +4,7 @@
 
 # default variables
 BLANK=''
-OUTPUT_DEFAULT=/mp4/merged.mp4
+OUTPUT_DEFAULT=./mp4/merged.mp4
 
 # global variables
 LOGO=$1
