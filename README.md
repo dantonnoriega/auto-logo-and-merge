@@ -29,7 +29,7 @@ brew install rmtrash
 ```
 cd ~/Downloads/auto-logo-and-merge-master/
 chmod +x run.sh
-./run.sh img/P1BHs.png mp4/video-trim-noaudio.mp4 mp4/audio-layer.m4a mp4/merged-ryan.mp4
+./run.sh img/P1BHs.png mp4/video-trim-noaudio.mp4 mp4/audio-layer.m4a mp4/merged-ryan.mp4 "949-555-5555" "www.gramnegative.com"
 ```
 
 # How it works
@@ -37,10 +37,10 @@ chmod +x run.sh
 It uses the following syntax:
 
 ```
-./run.sh path/to/logo.png  path/to/video.mp4  path/to/audio.mp3  path/to/output.mp4  "999 999 9999"  "www.somewebsite.com"
+./run.sh path/to/logo.png  path/to/video.mp4  path/to/audio.mp3  path/to/output.mp4  "999-999-9999"  "www.somewebsite.com"
 ```
 
-The last two variables are optional. They default to blank. NOTE: Must use DOUBLE quotes `""`!
+The last two variables are optional. They default to blank. NOTE: Must use DOUBLE quotes `""`.
 
 It is SUPER IMPORTANT that you use *relative* or *full* paths. For example, *relative* paths like `img/P1BHs.png` or `./img/P1BHs.png` work, as do *full* paths like `/Users/dnoriega/GitHub/auto-logo-and-merge/img/P1BHs.png`. 
 
