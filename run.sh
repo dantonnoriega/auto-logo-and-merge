@@ -22,6 +22,6 @@ echo "OUTPUT = $OUTPUT"
 echo "PHONE = $PHONE"
 echo "WEBSITE = $WEBSITE"
 
-sh ./bin/gen-logo.sh $LOGO $PHONE $WEBSITE
-sh ./bin/merge-mp4.sh $VIDEO $OUTPUT $AUDIO
+sh bin/gen-logo.sh $LOGO $PHONE $WEBSITE
+sh bin/merge-mp4.sh $VIDEO $OUTPUT $AUDIO
 

@@ -29,7 +29,7 @@ brew install rmtrash
 ```
 cd ~/Downloads/auto-logo-and-merge-master/
 chmod +x run.sh
-./run.sh ./img/P1BHs.png ./mp4/video-trim-noaudio.mp4 ./mp4/video-audio.m4a ./mp4/merged-ryan.mp4
+./run.sh img/P1BHs.png mp4/video-trim-noaudio.mp4 mp4/audio-layer.m4a mp4/merged-ryan.mp4
 ```
 
 # How it works
@@ -37,12 +37,14 @@ chmod +x run.sh
 It uses the following syntax:
 
 ```
-./run.sh /full/path/to/logo.png  /full/path/to/video.mp4  /full/path/to/audio.mp3  /full/path/to/output.mp4  "999 999 9999"  "www.somewebsite.com"
+./run.sh path/to/logo.png  path/to/video.mp4  path/to/audio.mp3  path/to/output.mp4  "999 999 9999"  "www.somewebsite.com"
 ```
 
 The last two variables are optional. They default to blank. NOTE: Must use DOUBLE quotes `""`!
 
-It is SUPER IMPORTANT that you use FULL paths. For example, relative paths like `/img/P1BHs.png` fail because everything is assumed to be an *absolute* path. It MUST be `./img/P1BHs.png` OR `/Users/dnoriega/GitHub/auto-logo-and-merge/img/P1BHs.png`.
+It is SUPER IMPORTANT that you use *relative* or *full* paths. For example, *relative* paths like `img/P1BHs.png` or `./img/P1BHs.png` work, as do *full* paths like `/Users/dnoriega/GitHub/auto-logo-and-merge/img/P1BHs.png`. 
+
+But `/img/P1BHs.png` fails because the program assumes *absolute* paths when you start with a `/` and will read it as such. Hence, a *full* path is just an *absolute* path to the file. I recommend using *relative* paths. Just remember: don't start with `/` when using relative paths!
 
 (This distinction was what kept me from getting the thing to work for like 2 hours. So annoying.)
 
